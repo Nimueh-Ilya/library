@@ -7,5 +7,49 @@
     <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div class="main-container">
+      <div class="header">
+        <button class="user-input">Add a book</button>
+        <button class="temp">temp</button>
+      </div>
+      <div class="main-content">
+        <div class="cards">
+          <dialog class="dialog">
+            <form action="post" method="dialog" class="modal">
+              <label for="book-name">Name of the book:</label>
+              <input type="text" id="book-name" />
+              <label for="book-author">Author of the book:</label>
+              <input type="text" id="book-author" />
+              <label for="book-pages">Number of pages:</label>
+              <input type="tel" id="book-pages" />
+              <label for="book-status">Status</label>
+
+              <div class="read">
+                <input
+                  type="radio"
+                  id="book-status"
+                  name="status"
+                  value="read"
+                />
+                <label for="read">Read</label>
+              </div>
+              <div class="notRead">
+                <input
+                  type="radio"
+                  id="book-status"
+                  name="status"
+                  value="notRead"
+                />
+                <label for="notRead">Not read</label>
+              </div>
+              <button class="submission" type="submit" onsubmit="return">
+                Submit
+              </button>
+            </form>
+          </dialog>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
