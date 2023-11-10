@@ -27,3 +27,11 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+.read {
+  background-color: green;
+  color: white;
+}
+.not-read {
+  background-color: red;
+  color: white;
+}
