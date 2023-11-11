@@ -11,27 +11,80 @@ body {
   grid-template-rows: 1fr 5fr;
 }
 .header {
-  background-color: aliceblue;
+  background-color: #164e63;
   grid-row: 1/2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .main-content {
   grid-row: 2/-1;
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  background-color: white;
 }
 .modal {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+.my-library {
+  font-size: 40px;
+  color: aliceblue;
+  font-family: "Roboto", sans-serif;
+}
+.user-input {
+  border-style: none;
+  height: 50%;
+  background-color: #164e63;
+  color: aliceblue;
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  cursor: pointer;
+  font-weight: bold;
+}
 .read {
   background-color: green;
-  color: white;
 }
 .not-read {
   background-color: red;
+}
+.book-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+}
+.book-card > div {
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+}
+.book-card > button {
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  height: 2em;
+  width: 75%;
+  align-self: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.book-status {
+  margin-top: 8px;
   color: white;
+}
+.delete-button {
+  color: black;
+  background-color: white;
 }
