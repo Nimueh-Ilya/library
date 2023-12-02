@@ -8,11 +8,13 @@ const bookPages = document.querySelector("#book-pages");
 const bookStatus = document.querySelector("#book-status");
 const form = document.querySelector(".modal");
 const myLibrary = [];
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
 }
 function addToLibrary(inputTitle, inputAuthor, inputPages, inputRead) {
   inputTitle = new Book(
@@ -74,7 +76,7 @@ submitButton.addEventListener("click", () => {
       cardsContainer.appendChild(tempdiv);
       if (tempread.innerText == "Read") {
         tempread.classList.add("read");
-      } else if (tempread.innerText == "Not Read") {
+      } else if (tempread.innerText == "Not read") {
         tempread.classList.add("not-read");
       }
       tempdelete.addEventListener("click", () => {
